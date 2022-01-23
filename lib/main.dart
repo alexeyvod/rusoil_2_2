@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pizza.dart';
 
 void main() {
   runApp(const MyApp());
@@ -122,6 +123,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ),
                       child: Text("Отправить код"),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => pizza()));
+                  },
+                  child: Text("Заказать пиццу",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.deepOrange,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold)
                   ),
                 )
               ],
